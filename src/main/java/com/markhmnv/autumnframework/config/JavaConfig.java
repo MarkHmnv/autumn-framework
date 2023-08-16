@@ -1,7 +1,6 @@
-package com.markhmnv.autumnframework.core.service.impl;
+package com.markhmnv.autumnframework.config;
 
-import com.markhmnv.autumnframework.core.annotation.Injectable;
-import com.markhmnv.autumnframework.core.service.Config;
+import com.markhmnv.autumnframework.annotation.Injectable;
 import lombok.Getter;
 import org.reflections.Reflections;
 

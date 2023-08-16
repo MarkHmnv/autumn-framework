@@ -35,8 +35,7 @@ public class JavaConfig implements Config {
 Create Injectable classes with @Injectable and inject dependencies using @Inject.
 
 ```java
-import com.markhmnv.autumnframework.core.annotation.Inject;
-import lombok.RequiredArgsConstructor;
+import com.markhmnv.autumnframework.annotation.Inject;
 
 @Injectable
 public class DemoService {

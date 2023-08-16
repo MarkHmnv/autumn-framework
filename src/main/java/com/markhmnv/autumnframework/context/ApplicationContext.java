@@ -1,9 +1,9 @@
-package com.markhmnv.autumnframework.core.service.impl;
+package com.markhmnv.autumnframework.context;
 
-import com.markhmnv.autumnframework.core.annotation.Injectable;
-import com.markhmnv.autumnframework.core.enums.Scope;
-import com.markhmnv.autumnframework.core.factory.ObjectFactory;
-import com.markhmnv.autumnframework.core.service.Config;
+import com.markhmnv.autumnframework.annotation.Injectable;
+import com.markhmnv.autumnframework.enums.Scope;
+import com.markhmnv.autumnframework.factory.ObjectFactory;
+import com.markhmnv.autumnframework.config.Config;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;

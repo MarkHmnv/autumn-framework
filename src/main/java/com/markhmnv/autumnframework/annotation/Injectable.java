@@ -1,6 +1,6 @@
-package com.markhmnv.autumnframework.core.annotation;
+package com.markhmnv.autumnframework.annotation;
 
-import com.markhmnv.autumnframework.core.enums.Scope;
+import com.markhmnv.autumnframework.enums.Scope;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

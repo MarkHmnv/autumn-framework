@@ -1,8 +1,7 @@
-package com.markhmnv.autumnframework;
+package com.markhmnv.autumnframework.demo;
 
-import com.markhmnv.autumnframework.demo.DemoController;
-import com.markhmnv.autumnframework.core.service.impl.ApplicationContext;
-import com.markhmnv.autumnframework.core.service.impl.AutumnApplication;
+import com.markhmnv.autumnframework.context.ApplicationContext;
+import com.markhmnv.autumnframework.core.AutumnApplication;
 
 public class Demo {
     public static void main(String[] args) {

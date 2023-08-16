@@ -1,27 +1,30 @@
-package com.markhmnv.autumnframework.core.service.impl;
+package com.markhmnv.autumnframework.config;
 
-import com.markhmnv.autumnframework.core.annotation.InjectProperty;
-import com.markhmnv.autumnframework.core.service.ObjectConfigurator;
+import com.markhmnv.autumnframework.annotation.InjectProperty;
+import com.markhmnv.autumnframework.context.ApplicationContext;
 import lombok.SneakyThrows;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.util.Map;
-import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toMap;
 
 public class InjectPropertyAnnotationObjectConfigurator implements ObjectConfigurator {
-    private final Map<String, String> propertiesMap;
+    private Map<String, String> propertiesMap = null;
 
     @SneakyThrows
     public InjectPropertyAnnotationObjectConfigurator() {
-        String path = ClassLoader.getSystemClassLoader().getResource("application.properties").getPath();
-        Stream<String> lines = new BufferedReader(new FileReader(path)).lines();
-        this.propertiesMap = lines
-                .map(line -> line.split("="))
-                .collect(toMap(arr -> arr[0], arr -> arr[1]));
+        InputStream inputStream = ClassLoader.getSystemClassLoader().getResourceAsStream("application.properties");
+        if(inputStream != null) {
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
+                this.propertiesMap = reader.lines()
+                        .map(line -> line.split("="))
+                        .collect(toMap(arr -> arr[0], arr -> arr[1]));
+            }
+        }
     }
 
     /**
@@ -33,6 +36,9 @@ public class InjectPropertyAnnotationObjectConfigurator implements ObjectConfigu
     @Override
     @SneakyThrows
     public void configure(Object t, ApplicationContext context) {
+        if (propertiesMap == null)
+            return;
+
         Class<?> implClass = t.getClass();
         for (Field field : implClass.getDeclaredFields()) {
             InjectProperty annotation = field.getAnnotation(InjectProperty.class);

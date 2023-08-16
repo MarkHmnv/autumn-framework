@@ -1,4 +1,4 @@
-package com.markhmnv.autumnframework.core.annotation;
+package com.markhmnv.autumnframework.annotation;
 
 import java.lang.annotation.Retention;
 

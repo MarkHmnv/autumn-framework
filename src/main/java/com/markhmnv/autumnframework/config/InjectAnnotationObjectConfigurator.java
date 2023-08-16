@@ -1,7 +1,7 @@
-package com.markhmnv.autumnframework.core.service.impl;
+package com.markhmnv.autumnframework.config;
 
-import com.markhmnv.autumnframework.core.annotation.Inject;
-import com.markhmnv.autumnframework.core.service.ObjectConfigurator;
+import com.markhmnv.autumnframework.annotation.Inject;
+import com.markhmnv.autumnframework.context.ApplicationContext;
 import lombok.SneakyThrows;
 
 import java.lang.reflect.Field;

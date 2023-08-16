@@ -1,9 +1,9 @@
-package com.markhmnv.autumnframework.core.factory;
+package com.markhmnv.autumnframework.factory;
 
-import com.markhmnv.autumnframework.core.annotation.Inject;
-import com.markhmnv.autumnframework.core.service.ObjectConfigurator;
-import com.markhmnv.autumnframework.core.service.ProxyConfigurator;
-import com.markhmnv.autumnframework.core.service.impl.ApplicationContext;
+import com.markhmnv.autumnframework.annotation.Inject;
+import com.markhmnv.autumnframework.context.ApplicationContext;
+import com.markhmnv.autumnframework.config.ObjectConfigurator;
+import com.markhmnv.autumnframework.config.ProxyConfigurator;
 import lombok.SneakyThrows;
 import org.reflections.Reflections;
 

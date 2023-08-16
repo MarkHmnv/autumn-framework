@@ -1,6 +1,6 @@
-package com.markhmnv.autumnframework.core.service;
+package com.markhmnv.autumnframework.config;
 
-import com.markhmnv.autumnframework.core.service.impl.ApplicationContext;
+import com.markhmnv.autumnframework.context.ApplicationContext;
 
 import java.lang.reflect.Constructor;
 

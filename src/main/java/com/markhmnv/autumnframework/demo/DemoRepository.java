@@ -1,6 +1,6 @@
 package com.markhmnv.autumnframework.demo;
 
-import com.markhmnv.autumnframework.core.annotation.Injectable;
+import com.markhmnv.autumnframework.annotation.Injectable;
 
 import java.util.List;
 

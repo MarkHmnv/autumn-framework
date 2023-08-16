@@ -1,4 +1,4 @@
-package com.markhmnv.autumnframework.core.service;
+package com.markhmnv.autumnframework.config;
 
 import org.reflections.Reflections;
 

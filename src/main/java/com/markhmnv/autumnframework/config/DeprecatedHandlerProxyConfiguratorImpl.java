@@ -1,6 +1,6 @@
-package com.markhmnv.autumnframework.core.service.impl;
+package com.markhmnv.autumnframework.config;
 
-import com.markhmnv.autumnframework.core.service.ProxyConfigurator;
+import com.markhmnv.autumnframework.context.ApplicationContext;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import net.bytebuddy.ByteBuddy;
